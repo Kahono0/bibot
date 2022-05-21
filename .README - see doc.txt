@@ -1,0 +1,40 @@
+Open the utils directory,
+Edit the binance_api.py script to enter your API keys for
+	-> mainnet
+	-> testnet {if needed}
+
+WARNING WARNING WARNING WARNING!!!
+-------------------------------------------------
+If your are running on testnet, set the TESTNET global variable in the 
+binance_api.py script to true. Else, it will trade with your assets if the 
+API_KEYS & API_SECRET are set.
+
+Also I have given the bot full permission to trade only if its error compared 
+to true value is <= 0.5, you can change that by altering the argument in the 
+method:
+	async def test_iterator(self,
+			valid_margin = 0.5
+			)
+
+I set PROFIT_MARGIN = LOSS_MARGIN = 0.2 {Making these values too big increases 
+	chances of making losses. Making it too small on the other hand makes it 
+	exists in the market without actually performing any trades.
+}
+-------------------------------------------------
+
+This bot runs for an hour after which it prompts you to allow it continue with 
+session. You can modify that and make it more fexible by editing this line:
+
+	if (float(time.time()) - LOGIN_TIMESTAMP) >= (60**2):#BREAK AFTER 1hr
+
+You can instantiate multiple sessions by invoking:
+
+	bot = BotSession(
+		base_asset = "<prefered base asset e.g BNB>", 
+		quote_asset = "<prefered quote asset e.g USDT>",
+	       )
+
+---------------------------------------------------
+In testnet, I am still landing in filter issues for SPOT trading
+---------------------------------------------------
+HAPPY TRADING!

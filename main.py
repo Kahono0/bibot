@@ -203,8 +203,8 @@ from bot import BotTrader
 # print(bt.one_step_predict())
 
 
-api_key = "8Q4lG5PECPsss9hRIZQiXyYZMzfiL3M2uxI2S6GrKeysMdSnIg5QxfcbxoH7Xq0R"
-secret_key = "XerhMYxAUwNxh8Q2t7Xk84ZbvxY0gCj0NGI8cW5Wto1LACboeIOzZGwsUTHBwByd"
+api_key = "<--------------------------------------------api----------------------------------------->"
+secret_key "<------------------------------------------secret---------------------------------------->"
 client = Spot(api_key,secret_key,base_url="https://testnet.binance.vision")
 s1 = "BNB"
 s2 = "USDT"
